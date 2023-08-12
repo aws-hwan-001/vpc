@@ -12,7 +12,7 @@ variable "tags" {
 variable "public_subnet_cidr" {
   description = "CIDR block for the public subnet"
   type        = string
-  defalut     = ""
+  default     = ""
 }
 
 variable "public_subnet_tags" {
