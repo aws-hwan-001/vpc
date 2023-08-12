@@ -7,16 +7,16 @@ resource "aws_vpc" "this" {
   tags       = var.tags
 }
 
-resource "aws_subnet" "primary" {
+resource "aws_subnet" "public_subnet_0" {
   vpc_id            = aws_vpc.this.id
   cidr_block        = var.primary_subnet_cidr
   availability_zone = data.aws_availability_zones.available.names[0]
   tags              = var.primary_subnet_tags
 }
 
-resource "aws_subnet" "secondary" {
+resource "aws_subnet" "public_subnet_1" {
   vpc_id            = aws_vpc.this.id
-  cidr_block        = var.secondary_subnet_cidr
+  cidr_block        = var.public_subnet_cidr
   availability_zone = data.aws_availability_zones.available.names[1]
-  tags              = var.secondary_subnet_tags
+  tags              = var.private_subnet_tags
 }

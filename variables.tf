@@ -9,24 +9,24 @@ variable "tags" {
   default     = {}
 }
 
-variable "primary_subnet_cidr" {
-  description = "CIDR block for the primary subnet"
+variable "public_subnet_cidr" {
+  description = "CIDR block for the public subnet"
   type        = string
 }
 
-variable "primary_subnet_tags" {
-  description = "Tags for the primary subnet"
+variable "public_subnet_tags" {
+  description = "Tags for the public subnet"
   type        = map(string)
   default     = {}
 }
 
-variable "secondary_subnet_cidr" {
-  description = "CIDR block for the secondary subnet"
+variable "private_subnet_cidr" {
+  description = "CIDR block for the private subnet"
   type        = string
 }
 
-variable "secondary_subnet_tags" {
-  description = "Tags for the secondary subnet"
+variable "private_subnet_tags" {
+  description = "Tags for the private subnet"
   type        = map(string)
   default     = {}
 }
