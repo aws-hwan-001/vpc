@@ -9,7 +9,7 @@ resource "aws_vpc" "this" {
 
 resource "aws_subnet" "public_subnet_0" {
   vpc_id            = aws_vpc.this.id
-  cidr_block        = var.primary_subnet_cidr
+  cidr_block        = var.public_subnet_cidr
   availability_zone = data.aws_availability_zones.available.names[0]
   tags              = var.public_subnet_tags
 }
